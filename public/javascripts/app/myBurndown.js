@@ -49,30 +49,39 @@ function drawChart() {
   var options = {
     title: 'Release Burndown',
     seriesDefaults: {
-      renderer:$.jqplot.BarRenderer,
       shadow: true,
-      barWidth: 10
+      barWidth: 10,
+      rendererOptions: {
+              sbarMargin: 20,
+              highlightMouseDown: true   
+          },
     },
     series: [
-            {fillToZero: true},
-            {fillToZero: true},
             {
-            renderer: $.jqplot.LineRenderer,
-            lineWidth: 2,
-            pointLabels: {
-                show: false
+              renderer:$.jqplot.BarRenderer,
+              fillToZero: true 
             },
-            markerOptions: {
-                size: 4
-            }},
             {
-            renderer: $.jqplot.LineRenderer,
-            lineWidth: 2,
+              renderer:$.jqplot.BarRenderer,
+              fillToZero: true
+            },
+            {
+              disableStack : true,
+              renderer: $.jqplot.LineRenderer,
+              lineWidth: 2,
+              pointLabels: {
+                show: false
+              },
+              markerOptions: {
+                size: 4
+              }
+            },
+            {
+              disableStack : true,
+              renderer: $.jqplot.LineRenderer,
+              lineWidth: 2
             }
-            ],
-    axesDefaults: {
-
-    },            
+            ], 
     axes: {
       xaxis: {
         renderer: $.jqplot.CategoryAxisRenderer,
@@ -81,7 +90,6 @@ function drawChart() {
       },
       yaxis: {
         forceTickAt0: true
-        //min: 0
       }
     },
     canvasOverlay: {

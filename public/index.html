@@ -3,20 +3,23 @@
 	<head>
 		<title>myBurndown</title>
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/jquery.jqplot.min.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/jquery.jqplot.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="stylesheets/main.css" type="text/css" media="screen" charset="utf-8">
 
     <script type="text/javascript" src="javascripts/ext/jquery.min.js" ></script>
     <script type="text/javascript" src="javascripts/ext/jquery.jqplot.min.js" ></script>   
-    <script type="text/javascript" src="javascripts/ext/jqplot.barRenderer.min.js"></script>
+    <script type="text/javascript" src="javascripts/ext/jqplot.barRenderer.js"></script>
     <script type="text/javascript" src="javascripts/ext/jqplot.categoryAxisRenderer.min.js"></script>
     <script type="text/javascript" src="javascripts/ext/jqplot.canvasOverlay.min.js"></script>
     <script type="text/javascript" src="javascripts/ext/jqplot.canvasTextRenderer.min.js"></script>
+    <script type="text/javascript" src="javascripts/ext/jqplot.pointLabels.min.js"></script>
 
     <script type="text/javascript" src="javascripts/app/myBurndown.js"></script>
 
 	</head>
 	<body onload=drawChart()>
-    <table id="points" style="float: left; margin-left:20px;">
+
+    <table id="points" >
       <tr>
         <td><label for="totalPoints">Total points on the backlog: </label></td>
         <td><input id="totalPoints" type="number" min="1" max="10000"/></td>
@@ -30,9 +33,10 @@
         <td><input id="extraWorkPoints" type="string"/></td>
       </tr>
     </table>
-    <img src="images/zilverline-logo-side-black.png" style="float: right; margin-right:20px; width: 250px;"/>
-    <div id="chartDivId" style="margin-top:20px; margin-left:20px; height:600px; clear: both;"></div>
-  </body>
 
+    <img id="zilverlineImg" src="images/zilverline-logo-side-black.png" />
+    <div id="chartDivId" ></div>
+
+  </body>
 
 </html>
