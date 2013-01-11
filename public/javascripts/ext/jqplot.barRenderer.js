@@ -351,13 +351,10 @@
         var nseries = temp[1];
         var pos = temp[2];
 		var points = [];
+
+        //multiple series have to be printed above eachother.
+        this._barNudge = 0;
         
-        if (this._stack) {
-            this._barNudge = 0;
-        }
-        else {
-            this._barNudge = 0; //(-Math.abs(nseries/2 - 0.5) + pos) * (this.barWidth + this.barPadding)
-        }
         if (showLine) {
             var negativeColors = new $.jqplot.ColorGenerator(this.negativeSeriesColors);
             var positiveColors = new $.jqplot.ColorGenerator(this.seriesColors);
