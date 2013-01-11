@@ -1,0 +1,15 @@
+#points {
+	display: none;
+}
+
+#zilverlineImg {
+	display: none;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+#chartDivId {
+	height: 600px;
+}
