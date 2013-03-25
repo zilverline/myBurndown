@@ -1,4 +1,4 @@
-myBurndown
+myBurndown - A burndown template
 ==========
 
 A jqplot implementation to create a release burndown
