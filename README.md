@@ -3,7 +3,7 @@ myBurndown
 
 A jqplot implementation to create a release burndown
 
-Use it at: http://zilverline.github.com/myBurndown/public/index.html
+Use this release burndown template live at: http://zilverline.github.com/myBurndown/public/index.html or get the source and build something better.
 
 Fill in:
 - the total amount of points on your backlog.
